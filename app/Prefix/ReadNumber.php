@@ -8,7 +8,7 @@ class ReadNumber implements ReadNumberInterface
 {
     // phone formating (212) 6007989253
     const pattern = '/[(*)]/m';
-    const MAPPING_DATA_DIRECTORY = __DIR__ .'\Map.php';
+    const MAPPING_DATA_DIRECTORY = __DIR__ .'/Map.php';
     private $phoneNumber;    
     
 

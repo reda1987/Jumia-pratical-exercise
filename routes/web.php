@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/datatable' ,[CustomerController::class, 'dataTable'])->name('Customer.datatable');
+Route::get('/index'     , [CustomerController::class, 'index'])->name('Customer.index');
+
+// Route::any('Search'		 ,array('as'=>'Search'		    ,'uses'=>'AjaxController@Search'));

@@ -25,11 +25,18 @@
 
 
     <body class="hold-transition sidebar-mini">
+    <div class="container-fluid">
+        <div class="row">
+          
+          <div class="col-sm-12">
+            <ol class="breadcrumb float-sm-center text-center">
+              <li class="breadcrumb-item"><a href="{{Route('Customer.index')}}">index</a></li>
+              <li class="breadcrumb-item"><a href="{{Route('Customer.datatable')}}">DataTable</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
         @yield('content')
-
-        
-
-
         @foreach(config('layout.resources.js') as $script)
             <script src="{{ asset($script) }}" type="text/javascript"></script>
         @endforeach
